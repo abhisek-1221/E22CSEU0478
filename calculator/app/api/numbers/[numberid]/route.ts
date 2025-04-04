@@ -11,7 +11,7 @@ const API_ENDPOINTS: Record<NumberType, string> = {
   r: `${API_BASE_URL}/rand`,
 };
 
-const AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQzNzQ4MjYzLCJpYXQiOjE3NDM3NDc5NjMsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImY0OTcxYTYzLTUyNWEtNGYyNy05OTk4LTAxY2Q5YzAwOWY4NCIsInN1YiI6ImUyMmNzZXUwNDc4QGJlbm5ldHQuZWR1LmluIn0sImVtYWlsIjoiZTIyY3NldTA0NzhAYmVubmV0dC5lZHUuaW4iLCJuYW1lIjoiYWJoaXNlayBzYWhvbyIsInJvbGxObyI6ImUyMmNzZXUwNDc4IiwiYWNjZXNzQ29kZSI6InJ0Q0haSiIsImNsaWVudElEIjoiZjQ5NzFhNjMtNTI1YS00ZjI3LTk5OTgtMDFjZDljMDA5Zjg0IiwiY2xpZW50U2VjcmV0IjoiVWVoWGFhbVJ4VUZlWW5SZiJ9.H4fruhPaql-fow11QJQK5V20X61SPyhUZeLva8XSv_I";
+const AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQzNzUwNTEwLCJpYXQiOjE3NDM3NTAyMTAsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImY0OTcxYTYzLTUyNWEtNGYyNy05OTk4LTAxY2Q5YzAwOWY4NCIsInN1YiI6ImUyMmNzZXUwNDc4QGJlbm5ldHQuZWR1LmluIn0sImVtYWlsIjoiZTIyY3NldTA0NzhAYmVubmV0dC5lZHUuaW4iLCJuYW1lIjoiYWJoaXNlayBzYWhvbyIsInJvbGxObyI6ImUyMmNzZXUwNDc4IiwiYWNjZXNzQ29kZSI6InJ0Q0haSiIsImNsaWVudElEIjoiZjQ5NzFhNjMtNTI1YS00ZjI3LTk5OTgtMDFjZDljMDA5Zjg0IiwiY2xpZW50U2VjcmV0IjoiVWVoWGFhbVJ4VUZlWW5SZiJ9.g-PAX04Vubh8rhs3zYqNEMPX6ZRBz3cCuRxTnJN5HPU";
 
 // Timeout for the API call (500ms)
 const API_TIMEOUT = 500;
@@ -27,6 +27,8 @@ async function fetchNumbersWithTimeout(type: NumberType): Promise<number[]> {
     if (!url) {
       throw new Error(`Invalid number type: ${type}`);
     }
+
+    console.log(`Fetching from URL: ${url}`);
 
     const response = await fetch(url, {
       signal: controller.signal,
