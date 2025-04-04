@@ -10,6 +10,6 @@
 ![Screenshot 2025-04-04 at 12 34 23 PM](https://github.com/user-attachments/assets/4767aa3e-512e-4c2a-a696-d02efe630d99)
 ![Screenshot 2025-04-04 at 12 34 11 PM](https://github.com/user-attachments/assets/b4a2a218-0fec-486b-a1a0-c119e34fb10b)
 
-### **Below is screenshot when aborted below 500ms**
+### **Below is screenshot when aborted next request under 500ms**
   
 ![Screenshot 2025-04-04 at 12 34 41 PM](https://github.com/user-attachments/assets/c2ab58ad-59df-4f7e-af98-9c52fa824c55)
